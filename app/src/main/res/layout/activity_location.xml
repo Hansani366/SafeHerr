@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/gradient_bg">
+
+    <!-- Topic Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="end|center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_safety_check_24"
+            android:contentDescription="Topic Icon"
+            android:layout_marginEnd="4dp" />
+
+        <TextView
+            android:id="@+id/tvTopicTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAFE HER"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Profile and Menu Icons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end|center_vertical"
+        android:layout_marginBottom="50dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_account_circle"
+            android:contentDescription="User"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_menu_24"
+            android:contentDescription="Menu"/>
+    </LinearLayout>
+
+    <!-- Centered Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Location Icon -->
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/baseline_add_location_alt_24"
+            android:contentDescription="Location Icon"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Live Location Status -->
+        <TextView
+            android:id="@+id/tvLiveLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetching Live Location..."
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnFindPoliceStation"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="Find Nearest Police Station"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_bg"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnShareLocation"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="Share Location via WhatsApp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_bg"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>
