@@ -15,7 +15,7 @@ public class Dashboard extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard); // Assuming your XML is activity_dashboard.xml
+        setContentView(R.layout.activity_dashboard);
 
         // Initialize buttons
         btnEmergency = findViewById(R.id.btnEmergency);
@@ -23,11 +23,11 @@ public class Dashboard extends AppCompatActivity {
         btnMenstrualCycle = findViewById(R.id.btnMenstrualCycle);
 
 
-        // Set up onClick listeners for each button
+
         btnEmergency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to Emergency Info Activity
+
                 Intent intent = new Intent(Dashboard.this, Emergency.class);
                 startActivity(intent);
             }
@@ -36,7 +36,7 @@ public class Dashboard extends AppCompatActivity {
         btnLocationSharing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to Location Sharing Activity
+
                 Intent intent = new Intent(Dashboard.this, Location.class);
                 startActivity(intent);
             }
@@ -45,7 +45,7 @@ public class Dashboard extends AppCompatActivity {
         btnMenstrualCycle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to Menstrual Cycle Activity
+
                 Intent intent = new Intent(Dashboard.this, Menstrual.class);
                 startActivity(intent);
             }

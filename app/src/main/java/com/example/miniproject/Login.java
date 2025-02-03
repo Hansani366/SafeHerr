@@ -12,12 +12,12 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login); // Ensure your XML file name is correct
+        setContentView(R.layout.activity_login);
 
-        // Initialize Login Button
+
         Button btnLogin = findViewById(R.id.btnLogin);
 
-        // Button click event to navigate to the Dashboard
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

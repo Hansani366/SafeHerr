@@ -7,7 +7,7 @@
     android:padding="16dp"
     android:background="@drawable/gradient_bg">
 
-    <!-- Topic Section -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
             android:textStyle="bold"/>
     </LinearLayout>
 
-    <!-- Description -->
+
     <TextView
         android:id="@+id/tvTopicDescription"
         android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
         android:layout_marginEnd="16dp"
         android:gravity="end"/>
 
-    <!-- Profile and Menu Icons -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
             android:contentDescription="Menu"/>
     </LinearLayout>
 
-    <!-- Centered Content -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -75,7 +75,7 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <!-- Image -->
+
         <ImageView
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -83,7 +83,7 @@
             android:contentDescription="Illustration"
             android:layout_marginBottom="30dp"/>
 
-        <!-- Buttons -->
+
         <Button
             android:id="@+id/btnEmergency"
             android:layout_width="match_parent"
