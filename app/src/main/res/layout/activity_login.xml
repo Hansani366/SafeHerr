@@ -57,7 +57,8 @@
         android:hint="Login with"
         android:padding="17dp"
         android:textAlignment="center"
-        android:textColorHint="@android:color/white"
+        android:textColorHint="@android:color/black"
+        android:textStyle="bold"
         android:inputType="text"/>
 
     <ImageView

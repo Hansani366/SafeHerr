@@ -1,135 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
     android:background="@drawable/gradient_bg">
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:gravity="end|center_vertical">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/baseline_safety_check_24"
-            android:contentDescription="Topic Icon"
-            android:layout_marginEnd="8dp" />
-
-        <TextView
-            android:id="@+id/tvTopicTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SAFE HER"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="end|center_vertical"
-        android:layout_marginBottom="50dp">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/baseline_account_circle"
-            android:contentDescription="User"
-            android:layout_marginEnd="16dp"/>
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/baseline_menu_24"
-            android:contentDescription="Menu"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
-
-
-        <ImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:src="@drawable/baseline_emoji_people_24"
-            android:contentDescription="Emergency Icon"
-            android:layout_marginBottom="20dp" />
-
-        <Button
-            android:id="@+id/btnSOS"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:text="SOS"
-            android:textColor="@android:color/white"
-            android:background="@drawable/btn_bg"
-            android:textSize="18sp"
-            android:padding="15dp"
-            android:textStyle="bold"
-            android:layout_marginBottom="20dp"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="In case of emergency, contact the numbers below."
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textAlignment="center"
-            android:layout_marginBottom="20dp"/>
+        android:padding="24dp">
 
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="end|center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_safety_check_24"
+                android:contentDescription="Topic Icon"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvTopicTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAFE HER"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical"
+            android:layout_marginBottom="50dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_account_circle"
+                android:contentDescription="User"
+                android:layout_marginEnd="16dp"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_menu_24"
+                android:contentDescription="Menu"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
             android:gravity="center">
 
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/baseline_emoji_people_24"
+                android:contentDescription="Emergency Icon"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/btnSOS"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:text="SOS"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_bg"
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"/>
 
             <TextView
-                android:id="@+id/tvContact1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Emergency Contact 1: 112"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
+                android:text="In case of emergency, contact the numbers below."
+                android:textColor="@color/black"
                 android:textSize="16sp"
-                android:layout_marginBottom="10dp"/>
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp"/>
 
-
-            <TextView
-                android:id="@+id/tvContact2"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Emergency Contact 2: 911"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="10dp"/>
+                android:gravity="center">
 
+                <TextView
+                    android:id="@+id/tvContact1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency Contact 1: 112"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="10dp"/>
 
-            <TextView
-                android:id="@+id/tvContact3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Emergency Contact 3: 100"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/tvContact2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency Contact 2: 911"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvContact3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency Contact 3: 100"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:background="@color/black"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

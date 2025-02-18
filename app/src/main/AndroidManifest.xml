@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,34 +12,49 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight"
         tools:targetApi="31">
+        <activity
+            android:name=".nav_menu"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <!-- Login is the only launcher activity -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".profile"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Login is the only launcher activity -->
         <activity
             android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Dashboard Activity -->
-        <activity android:name=".Dashboard" android:exported="true" />
-
-        <!-- Menstrual Cycle Activity -->
-        <activity android:name=".Menstrual" android:exported="true" />
-
-        <!-- Location Sharing Activity -->
-        <activity android:name=".Location" android:exported="true" />
-
-        <!-- Emergency Info Activity -->
-        <activity android:name=".Emergency" android:exported="true" />
-
-        <!-- Main Activity (If needed) -->
-        <activity android:name=".MainActivity"
+        </activity> <!-- Dashboard Activity -->
+        <activity
+            android:name=".Dashboard"
+            android:exported="true" /> <!-- Menstrual Cycle Activity -->
+        <activity
+            android:name=".Menstrual"
+            android:exported="true" /> <!-- Location Sharing Activity -->
+        <activity
+            android:name=".Location"
+            android:exported="true" /> <!-- Emergency Info Activity -->
+        <activity
+            android:name=".Emergency"
+            android:exported="true" /> <!-- Main Activity (If needed) -->
+        <activity
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.MiniProject" />
-
     </application>
 
 </manifest>
