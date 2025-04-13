@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradient_bg">
+    android:background="@color/white">
 
     <!-- Scrollable Content Area -->
     <ScrollView
@@ -73,9 +73,9 @@
                 android:padding="24dp">
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="350dp"
                     android:layout_height="250dp"
-                    android:src="@drawable/trackcycle"
+                    android:src="@drawable/mens2"
                     android:contentDescription="Menstrual Cycle Icon"
                     android:layout_marginBottom="20dp"/>
 

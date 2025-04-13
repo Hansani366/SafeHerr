@@ -2,178 +2,308 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/pink_bg3">
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center"
-            android:padding="16dp"
-            android:background="@drawable/gradient_bg"
-            tools:ignore="VisualLintBounds">
+            android:padding="16dp">
 
+            <!-- Header Section (App Title + Menu + Profile Icon) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="16dp"
-                android:gravity="end|center_vertical">
+                android:layout_gravity="center_vertical">
 
+                <!-- App Name (TextView) -->
                 <TextView
-                    android:id="@+id/tvTopicTitle"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="SAFE HER"
-                    android:textColor="@android:color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/tvTopicDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Women's Safety App...."
-                android:textColor="@android:color/black"
+                    android:layout_weight="1"
+                android:text="SAFE HER"
+                android:textSize="22sp"
                 android:textStyle="bold"
-                android:textSize="12sp"
-                android:layout_marginBottom="16dp"
-                android:layout_gravity="end"
-                android:layout_marginEnd="16dp"
-                android:gravity="end"/>
+                android:textColor="@color/white"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="end|center_vertical"
-                android:layout_marginBottom="20dp">
-
+                <!-- Profile Icon -->
                 <ImageView
                     android:id="@+id/userProfileIcon"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="16dp"
-                    android:clickable="true"
-                    android:contentDescription="User"
-                    android:focusable="true"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:src="@drawable/baseline_account_circle"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:contentDescription="Profile"
+                    android:layout_marginEnd="16dp"/> <!-- Added margin to create space between profile icon and menu icon -->
 
-
+                <!-- Menu Icon -->
                 <ImageView
                     android:id="@+id/menuIcon"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
                     android:contentDescription="Menu"
-                    android:src="@drawable/baseline_menu_24"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:src="@drawable/baseline_menu_24" />
             </LinearLayout>
 
-            <LinearLayout
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome! Quick Access Features Below"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/background_light"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Feature Cards (Replaced Old Buttons) -->
+            <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:columnCount="2"
+                android:layout_marginTop="16dp">
 
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:src="@drawable/mobile_login_pana_1"
-                    android:contentDescription="Illustration"
-                    android:layout_marginBottom="30dp"/>
+                <!-- Emergency Info Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardEmergency"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
 
-                <Button
-                    android:id="@+id/btnEmergency"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btn_bg"
-                    android:textColor="@android:color/white"
-                    android:padding="12dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Emergency Info"
-                    tools:ignore="VisualLintButtonSize" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/btnLocationSharing"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btn_bg"
-                    android:textColor="@android:color/white"
-                    android:padding="12dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Location Sharing"
-                    tools:ignore="VisualLintButtonSize" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/emergency"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Emergency Info"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <Button
-                    android:id="@+id/btnMenstrualCycle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btn_bg"
-                    android:textColor="@android:color/white"
-                    android:padding="12dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Menstrual Cycle"
-                    tools:ignore="VisualLintButtonSize" />
+                <!-- Location Sharing Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
 
-                <Button
-                    android:id="@+id/btnCounseling"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btn_bg"
-                    android:textColor="@android:color/white"
-                    android:padding="12dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Counseling"
-                    tools:ignore="VisualLintButtonSize" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/btnArticles"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btn_bg"
-                    android:textColor="@android:color/white"
-                    android:padding="12dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Articles"
-                    tools:ignore="VisualLintButtonSize" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/location"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Location Sharing"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-            </LinearLayout>
+                <!-- Menstrual Cycle Tracker Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardMenstrual"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
 
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/periods"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Menstrual Cycle"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Counseling Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCounseling"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/counciling"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Counseling"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- New Help Request (Optional) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardHelpRequest"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/help"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Help Request"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardAIassistent"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/ai_help"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AI assistent"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardArticles"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/articles"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Articles"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
         </LinearLayout>
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/nav_view"
-            android:layout_width="170dp"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            app:menu="@menu/nav_menu"
-            app:headerLayout="@drawable/nav_header"
-            tools:ignore="MissingClass,VisualLintBounds" />
+            android:background="#F876A8"
+            app:menu="@menu/nav_menu"/>
 
     </androidx.drawerlayout.widget.DrawerLayout>
 
-
+    <!-- Bottom Navigation Bar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:menu="@menu/bottom_nav_menu"
+        android:background="@color/white"
         app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
-        android:background="@color/white"/>
-
-
+        app:itemTextColor="@color/black"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

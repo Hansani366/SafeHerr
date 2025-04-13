@@ -1,6 +1,5 @@
 Gender Equality App - BoldHer
 
-A Safe Space Dedicated to Uplifting, Supporting, and Empowering Women. This mobile application promotes gender equality and women's empowerment, providing features like emergency support, location sharing, counseling services, and menstrual cycle tracking.
 
 🚀 Features
 
