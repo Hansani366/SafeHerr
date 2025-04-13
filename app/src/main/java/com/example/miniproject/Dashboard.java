@@ -2,58 +2,44 @@ package com.example.miniproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageView;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 public class Dashboard extends AppCompatActivity {
 
-    // Declare buttons
-    Button btnEmergency, btnLocationSharing, btnMenstrualCycle;
+    // Declare the 5 feature cards
+    CardView cardEmergency, cardLocation, cardMenstrual, cardHelpRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        // Initialize buttons
-        btnEmergency = findViewById(R.id.btnEmergency);
-        btnLocationSharing = findViewById(R.id.btnLocationSharing);
-        btnMenstrualCycle = findViewById(R.id.btnMenstrualCycle);
+        // Initialize feature cards
+        cardEmergency = findViewById(R.id.cardEmergency);
+        cardLocation = findViewById(R.id.cardLocation);
+        cardMenstrual = findViewById(R.id.cardMenstrual);
+        cardHelpRequest = findViewById(R.id.cardHelpRequest);
 
-        // Set onClick listeners for buttons
-        btnEmergency.setOnClickListener(v -> {
-            Intent intent = new Intent(Dashboard.this, Emergency.class);
-            startActivity(intent);
-        });
-
-        btnLocationSharing.setOnClickListener(v -> {
-            Intent intent = new Intent(Dashboard.this, Location.class);
-            startActivity(intent);
-        });
-
-        btnMenstrualCycle.setOnClickListener(v -> {
-            Intent intent = new Intent(Dashboard.this, Menstrual.class);
-            startActivity(intent);
-        });
-
-        // User profile icon click listener
+        // Profile icon click - Go to Profile screen
         ImageView userProfileIcon = findViewById(R.id.userProfileIcon);
-        userProfileIcon.setOnClickListener(v -> {
-            Intent intent = new Intent(Dashboard.this, profile.class);
-            startActivity(intent);
-        });
+        userProfileIcon.setOnClickListener(v -> startActivity(new Intent(Dashboard.this, profile.class)));
 
-        // DrawerLayout and menu icon initialization
+        // Menu icon to open navigation drawer
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         ImageView menuIcon = findViewById(R.id.menuIcon);
+        menuIcon.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
 
-        // Open the navigation drawer when menu icon is clicked
-        menuIcon.setOnClickListener(v -> {
-            drawerLayout.openDrawer(GravityCompat.START);
-        });
+        // Card click listeners
+        cardEmergency.setOnClickListener(v -> startActivity(new Intent(Dashboard.this, Emergency.class)));
+
+        cardLocation.setOnClickListener(v -> startActivity(new Intent(Dashboard.this, Location.class)));
+
+        cardMenstrual.setOnClickListener(v -> startActivity(new Intent(Dashboard.this, Menstrual.class)));
+
+        cardHelpRequest.setOnClickListener(v -> startActivity(new Intent(Dashboard.this, help_request.class)));
     }
 }

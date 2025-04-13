@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="#FFFFFF">
+
+  <TextView
+      android:id="@+id/helpText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Need Help?"
+      android:textSize="22sp"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      android:paddingBottom="10dp" />
+
+  <EditText
+      android:id="@+id/helpMessage"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Describe your issue..."
+      android:padding="10dp"
+      android:background="@android:drawable/editbox_background"
+      android:minHeight="100dp"/>
+
+  <Button
+      android:id="@+id/btnSendHelp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:background="#3C81C5"
+      android:padding="10dp"
+      android:text="Request Help"
+      android:textColor="#000000" />
+</LinearLayout>

@@ -4,5 +4,5 @@
     <corners android:radius="16dp"/>
     <solid android:color="#1F1D1D"/>
     <padding android:left="16dp" android:right="16dp"/>
-    <shadowColor android:color="#EDE1E1"/>
+    <shadowColor android:color="#0F0E0E"/>
 </shape>

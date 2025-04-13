@@ -15,6 +15,16 @@
         android:contentDescription="User Icon"
         android:layout_marginBottom="20dp"/>
 
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:padding="14dp"
+        android:background="@drawable/input_bg"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="textPersonName"/>
     <!-- Email Input -->
     <EditText
         android:id="@+id/edtEmail"
@@ -25,7 +35,8 @@
         android:background="@drawable/input_bg"
         android:textColor="@android:color/black"
         android:textColorHint="@android:color/darker_gray"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="12dp"/>
 
     <!-- Password Input -->
     <EditText
@@ -45,7 +56,7 @@
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Signup"
         android:padding="12dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_bg"
@@ -61,50 +72,12 @@
         android:clickable="true"
         android:focusable="true"
         android:minHeight="48dp"
-        android:text="Don't have an account? Register here"
+        android:text="Alredy have an account? Login here"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold" />
 
-    <!-- Social Login Text -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Or login with"
-        android:padding="10dp"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
-        android:textSize="16sp"/>
 
-    <!-- Social Login Buttons -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
-
-        <!-- Google Login -->
-        <ImageView
-            android:id="@+id/btnGoogleLogin"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/platform_google__color_original"
-            android:contentDescription="Google Login"
-            android:layout_marginEnd="20dp"
-            android:clickable="true"
-            android:focusable="true"/>
-
-        <!-- Facebook Login -->
-        <ImageView
-            android:id="@+id/btnFacebookLogin"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/c"
-            android:contentDescription="Facebook Login"
-            android:clickable="true"
-            android:focusable="true"/>
-    </LinearLayout>
 
     <!-- Loading Indicator -->
     <ProgressBar

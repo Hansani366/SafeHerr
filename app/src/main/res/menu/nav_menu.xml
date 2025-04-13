@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-<item
-    android:id="@+id/nav_home"
-    android:title="Settings"
-    android:icon="@drawable/settings" />
+    <group android:id="@+id/main_group" android:checkableBehavior="single">
 
-<item
-    android:id="@+id/nav_profile"
-    android:title="Share"
-    android:icon="@drawable/share" />
+        <item
+            android:id="@+id/nav_settings"
+            android:title="Settings"
+            android:icon="@drawable/settings"
+            android:titleCondensed="Settings" />
 
-<item
-    android:id="@+id/nav_settings"
-    android:title="Help"
-    android:icon="@drawable/help_circle_contained" />
+        <item
+            android:id="@+id/nav_share"
+            android:title="Share"
+            android:icon="@drawable/share"
+            android:titleCondensed="Share" />
+
+        <item
+            android:id="@+id/nav_help"
+            android:title="Help"
+            android:icon="@drawable/help_circle_contained"
+            android:titleCondensed="Help" />
+
+    </group>
+
 </menu>

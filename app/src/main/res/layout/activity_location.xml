@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="24dp"
-        android:background="@drawable/gradient_bg">
+        android:background="@drawable/map">
 
         <!-- Top Section: Title and Icons -->
         <LinearLayout

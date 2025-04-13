@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "221774110570",
+    "project_id": "safeher62",
+    "storage_bucket": "safeher62.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221774110570:android:8c4ce6233133ca862f8f13",
+        "android_client_info": {
+          "package_name": "com.example.miniproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANdcA6y5DZJnyG7EdFyqjEl5ujfj3o2RU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
